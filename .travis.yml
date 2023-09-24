@@ -16,7 +16,7 @@ after_succes:
 # login to docker cli
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-# take images and push them to docker hub a
+# take images and push them to docker hub a a 
 docker push kubi89/multi-client
 docker push kubi89/multi-nginx
 docker push kubi89/multi-server
