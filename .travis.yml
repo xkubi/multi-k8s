@@ -22,3 +22,15 @@ after_success:
   - docker push kubi89/multi-nginx
   - docker push kubi89/multi-server
   - docker push kubi89/multi-worker
+
+deploy:
+provider: elasticbeanstalk
+region: us-east-1
+app: docker-multicontainer
+env: Docker-multicontainer-env
+bucket_name: elasticbeanstalk-us-east-1-399057701824
+bucket_path: docker-multicontainer
+on:
+  branch: master
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: "$AWS_SECRET_KEY"
