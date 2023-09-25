@@ -5,10 +5,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t kubi89/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true stephengrider/react-test npm test
+  - docker run -e CI=true kubi89/react-test npm test
 
 after_success:
   - docker build -t kubi89/multi-client ./client
