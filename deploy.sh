@@ -1,5 +1,5 @@
-docker build -t kubi89/multi-client:latest -t kubi89/multiclient:$SHA -f ./client/Dockerfile ./client
-docker build -t kubi89/multi-server:latest -t kubi89/multi0-server:$SHA -f ./server/Dockerfile ./server
+docker build -t kubi89/multi-client:latest -t kubi89/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t kubi89/multi-server:latest -t kubi89/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t kubi89/multi-worker:latest -t kubi89/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push kubi89/multi-client:latest
 docker push kubi89/multi-server:latest
