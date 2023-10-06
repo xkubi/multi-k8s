@@ -8,7 +8,7 @@ env:
 before_install:
   - openssl aes-256-cbc -K $encrypted_379231630ed5_key -iv $encrypted_379231630ed5_iv -in multi-k8s-401112-1beed90bebf0.json.enc -out multi-k8s-401112-1beed90bebf0.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
-  - source $HOME/google-cloud-sdh/path.bash.inc
+  - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-401112 
